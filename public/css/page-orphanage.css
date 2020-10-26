@@ -121,6 +121,7 @@ main {
 
 .open-details .open-on-weekends {
   border-radius: 20px;
+  line-height: 1.5;
 }
 
 .open-on-weekends.open {
