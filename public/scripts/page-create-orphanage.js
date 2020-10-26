@@ -27,7 +27,7 @@ map.on('click', (event) => {
   // add icon layer
   marker = L.marker([lat, lng], { icon })
   .addTo(map);
-})
+});
 
 // add field of photos
 function addPhotoField() {
@@ -44,14 +44,14 @@ function addPhotoField() {
   const input = newFieldContainer.children[0];
 
   if (input.value == "") {
-    return
-  };
+    return;
+  }
 
   // limpar o campo antes de add ao container de imagens
   input.value = "";
 
   // add o clone ao container de #images
-  container.appendChild(newFieldContainer)
+  container.appendChild(newFieldContainer);
 }
 
 function deleteField(event) {
@@ -63,11 +63,11 @@ function deleteField(event) {
     // limpar o valor do campo
     span.parentNode.children[0].value = "";
 
-    return
+    return;
   }
 
   // deletar o campo 
-  span.parentNode.remove;
+  span.parentNode.remove();
 }
 
 // select yes or no
@@ -81,15 +81,17 @@ function toggleSelect(event) {
   button.classList.add('active');
 
   // atualizar o meu input hidden com o valor selecionado
-  const input = document.querySelector('[name="open_on_weekends "]');
+  const input = document.querySelector('[name="open_on_weekends"]');
 
   input.value = button.dataset.value;
 }
 
 function validate(event) {
   // validar se lat e lng estão preenchidos
-  const needsLatAndLng = true; // input value vazio
-  if (needsLatAndLng) {
+  // const needsLatAndLng = true; // input value vazio
+  const lat = document.querySelector('[name="lat"').value;
+  const lng = document.querySelector('[name="lng"').value;
+  if (lat == "" || lng == "") { // (needsLatAndLng)
     event.preventDefault();
     alert('Selecione um ponto no mapa');
   }

@@ -4,7 +4,7 @@ const options = {
   doubleClickZoom: false,
   scrollWheelZoom: false,
   zoomControl: false
-}
+};
 
 // get values from html
 const lat = document.querySelector('span[data-lat]').dataset.lat;
@@ -18,7 +18,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 // create icon
 const icon = L.icon({
-  iconUrl:"/images/map-marker.svg",
+  iconUrl: "/images/map-marker.svg",
   iconSize: [58, 68],
   iconAnchor: [29, 68],
   popupAnchor: [170, 2]
