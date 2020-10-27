@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width= , initial-scale=1.0" />
@@ -46,7 +46,7 @@
         </footer>
       </aside>
 
-      <main class="animate-appear width-sidebar">
+      <main class="animate-appear with-sidebar">
         <form action="save-orphanage" method="post" onsubmit="validate(event)">
           <fieldset>
             <legend>Dados</legend>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="input-block images">
-              <label for="images">Foto</label>
+              <label for="images">Fotos</label>
 
               <div id="images" class="images-upload">
                 <div class="new-upload">
@@ -102,7 +102,7 @@
               </div>
 
               <button onclick="addPhotoField()" type="button">
-                <img src="/images/add-file.svg" alt="Nova imagem" />
+                <img src="/images/add-file.svg" alt="Adicionar foto" />
               </button>
             </div>
           </fieldset>
@@ -121,11 +121,11 @@
             </div>
 
             <div class="input-block">
-              <label for="oppening_hours">Horário das visitas</label>
+              <label for="opening_hours">Horário das visitas</label>
               <input
-                id="oppening_hours"
+                id="opening_hours"
                 type="text"
-                name="oppening_hours"
+                name="opening_hours"
                 required
               />
             </div>
